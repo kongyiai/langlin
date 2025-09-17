@@ -1,0 +1,934 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏州琅琳五金制品股份有限公司</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        accent: '#FF7D00',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease-in-out;
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center bg-white/90 bg-blur shadow-sm">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-primary">
+                    <i class="fa fa-cube mr-2"></i>琅琳五金
+                </h1>
+            </div>
+            
+            <!-- 桌面导航 -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="font-medium hover:text-primary transition-custom">首页</a>
+                <a href="#about" class="font-medium hover:text-primary transition-custom">公司简介</a>
+                <a href="#products" class="font-medium hover:text-primary transition-custom">产品展示</a>
+                <a href="#history" class="font-medium hover:text-primary transition-custom">发展历程</a>
+                <a href="#culture" class="font-medium hover:text-primary transition-custom">公司文化</a>
+                <a href="#contact" class="font-medium hover:text-primary transition-custom">联系我们</a>
+            </div>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-toggle" class="md:hidden text-dark text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="py-2 hover:text-primary transition-custom">首页</a>
+                <a href="#about" class="py-2 hover:text-primary transition-custom">公司简介</a>
+                <a href="#products" class="py-2 hover:text-primary transition-custom">产品展示</a>
+                <a href="#history" class="py-2 hover:text-primary transition-custom">发展历程</a>
+                <a href="#culture" class="py-2 hover:text-primary transition-custom">公司文化</a>
+                <a href="#contact" class="py-2 hover:text-primary transition-custom">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- 替换为新的图片链接 -->
+            <img src="https://tc-new.z.wiki/autoupload/f/KCPs0PldssTIw8mnOy_VmuXH61lIP1He7XoKPQqm2oqyl5f0KlZfm6UsKj-HyTuv/20250917/b4cH/1440X1080/WPS%E5%9B%BE%E7%89%87%281%29.png" alt="公司相关图片" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-dark/70"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 z-10 text-center text-white">
+            <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-6 leading-tight text-shadow animate-fade-in">
+                苏州琅琳五金制品股份有限公司
+            </h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-3xl mx-auto mb-10 text-white/90">
+                专业设计、开发、生产制作各类道具的综合性企业，致力于为客户提供高品质的产品与服务
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#about" class="bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-custom shadow-lg">
+                    了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#products" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-custom">
+                    浏览产品 <i class="fa fa-th-large ml-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <a href="#about" class="text-3xl">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section id="about" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">公司简介</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://tc-new.z.wiki/autoupload/f/KCPs0PldssTIw8mnOy_VmuXH61lIP1He7XoKPQqm2oqyl5f0KlZfm6UsKj-HyTuv/20250917/ZV9W/1560X1560/%E5%95%86%E6%A0%87.jpeg" alt="公司商标图片" class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                            <p class="text-3xl font-bold text-primary">18+</p>
+                            <p class="text-dark/70">年行业经验</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <p class="text-lg mb-6 leading-relaxed">
+                        苏州琅琳五金制品股份有限公司（前身为雨恭雕塑）成立于2005年，位于中国江苏省常熟市上湖镇野塘工业区新乡村。是一家专业设计、开发、生产制作各类道具的综合性企业。
+                    </p>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        在雕塑、模型、不锈钢、铝制、时尚衣架、高端酒店家具等领域，经过几年的发展，琅琳已成为一个时尚项目设计且具有一定规模的产销企业。
+                    </p>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        2020年新建郎溪分厂，拥有12000㎡厂房面积，专业生产高端定制钢木家具、展示道具等系列产品。
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">创新设计</h3>
+                                <p class="text-dark/70">每月开发多种新产品，满足不同高端市场需求</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i class="fa fa-globe text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">国际视野</h3>
+                                <p class="text-dark/70">融合国内外先进设计理念，产品远销世界各国</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i class="fa fa-trophy text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">卓越品质</h3>
+                                <p class="text-dark/70">"创意，卓越品质"的风格受到国内外客户一致赞赏</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i class="fa fa-handshake-o text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">经营理念</h3>
+                                <p class="text-dark/70">本着"质量第一，信誉至上"的理念，愿与客户共同发展</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品滑动展示区域 -->
+    <section id="products" class="py-20 bg-white overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">产品展示</h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">我们专注于各类高品质道具和家具的设计与生产，满足不同客户的高端需求</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <!-- 滑动控制按钮 -->
+            <div class="flex justify-between items-center mb-8 px-4">
+                <button id="scroll-left" class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md hover:bg-primary/90 transition-custom focus:outline-none">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                
+                <button id="scroll-right" class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md hover:bg-primary/90 transition-custom focus:outline-none">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- 滑动产品容器 -->
+            <div class="relative">
+                <div id="products-container" class="flex gap-6 overflow-x-auto scrollbar-hide pb-6 snap-x snap-mandatory">
+                    <!-- 产品1 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/ef02553d298c4622bdbbbdc00c7c4574~tplv-a9rns2rl98-image.image?rcl=202509170955111E6BF1DB5FFF7B56F711&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758678912&amp;x-signature=FdeY8UJmPniGDHkKRZC%2F%2BbEFkuk%3D" alt="艺术雕塑作品" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">艺术雕塑</h3>
+                            <p class="text-dark/70 mb-4">精美的艺术雕塑作品，为空间增添独特的艺术氛围和视觉享受。采用高品质材料制作，工艺精湛。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品2 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/1ef6c1cfbc614cbda35f24f4b6e49ee2~tplv-a9rns2rl98-image.image?rcl=2025091710030407008364C9BFCA4E5E15&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758679384&amp;x-signature=EcS95jyKT%2BRIIelZf%2Bj6Vwwm7oE%3D" alt="精致模型展示" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">常用道具</h3>
+                            <p class="text-dark/70 mb-4">各式各样的精美道具，适用于各种展示场景和专业需求。细节处理精细，还原度高，质感出众。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品3 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/630eab436887476480242e1bd6bfc86d~tplv-a9rns2rl98-image.image?rcl=20250917100438660ECE01211435B6BCF8&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758679479&amp;x-signature=9vX%2FvsLrErxn8Axo%2BtX%2BY123OVE%3D" alt="不锈钢制品" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">不锈钢制品</h3>
+                            <p class="text-dark/70 mb-4">高品质不锈钢产品，兼具美观与耐用性，适用于多种场景。表面处理精细，耐腐蚀，易清洁。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品4 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-search.byteimg.com/obj/labis/9acac32bb44d2f19cabd98b5b6f1a533" alt="铝制产品展示" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">铝制产品</h3>
+                            <p class="text-dark/70 mb-4">轻量化铝制产品，设计精美，适用于多种商业和家居场景。质感轻盈，造型多样，易于搭配。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品5 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/80537e73d6684db6bc3bca598b5391a8~tplv-a9rns2rl98-image.image?rcl=20250917100645EBE9D454517D5A3CD4AA&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758679605&amp;x-signature=mehI5rcICGfvGZCsJNibkoibwls%3D" alt="时尚衣架系列" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">时尚衣架</h3>
+                            <p class="text-dark/70 mb-4">设计时尚的衣架产品，为服装展示提供最佳解决方案。材质优良，承重性好，美观实用。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品6 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/88555285b1314f28815b9afcb4a8e4ca~tplv-a9rns2rl98-image.image?rcl=202509171010003B558156660DE7E269D6&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758679801&amp;x-signature=kQ%2F6rkKbsDFZ6OMVCWsgq3HVTbQ%3D" alt="高端酒店家具" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">高端酒店家具</h3>
+                            <p class="text-dark/70 mb-4">为高端酒店定制的精美家具，提升空间品质与舒适度。设计典雅，用料考究，工艺精湛。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品7 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] bg-light rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-custom snap-start group">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/f53f1797ac55425ab731b795f245d525~tplv-a9rns2rl98-image.image?rcl=202509171010439531505CA1E6925FF529&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758679844&amp;x-signature=DDf12MZ3WIn3N9K8OaMZsBymqrQ%3D" alt="商业展示道具" class="w-full h-full object-cover group-hover:scale-105 transition-custom duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">商业展示道具</h3>
+                            <p class="text-dark/70 mb-4">专为商业空间设计的展示道具，提升产品展示效果。结构稳固，造型新颖，易于组装。</p>
+                            <a href="#product-catalog" class="text-primary font-medium hover:underline inline-flex items-center">
+                                查看详情 <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 渐变遮罩 -->
+                <div class="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white to-transparent pointer-events-none z-10 hidden md:block"></div>
+                <div class="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent pointer-events-none z-10 hidden md:block"></div>
+            </div>
+            
+            <!-- 滑动提示 -->
+            <div class="text-center mt-8 text-dark/60 text-sm">
+                <p class="flex items-center justify-center">
+                    <i class="fa fa-hand-o-left mr-2"></i> 左右滑动浏览更多产品 <i class="fa fa-hand-o-right ml-2"></i>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品目录表 -->
+    <section id="product-catalog" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">产品目录表</h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">我们的全系列产品详细信息，如需了解更多可联系我们获取完整资料</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-xl shadow-lg">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="py-4 px-6 text-left">产品类别</th>
+                            <th class="py-4 px-6 text-left">产品名称</th>
+                            <th class="py-4 px-6 text-left">材质</th>
+                            <th class="py-4 px-6 text-left">应用场景</th>
+                            <th class="py-4 px-6 text-left">定制选项</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">艺术雕塑</td>
+                            <td class="py-4 px-6">抽象艺术摆件</td>
+                            <td class="py-4 px-6">不锈钢、铜、树脂</td>
+                            <td class="py-4 px-6">酒店大堂、商业中心</td>
+                            <td class="py-4 px-6">尺寸、材质、颜色</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">艺术雕塑</td>
+                            <td class="py-4 px-6">人物肖像雕塑</td>
+                            <td class="py-4 px-6">青铜、大理石</td>
+                            <td class="py-4 px-6">博物馆、企业展厅</td>
+                            <td class="py-4 px-6">尺寸、材质</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">常用道具</td>
+                            <td class="py-4 px-6">展示架</td>
+                            <td class="py-4 px-6">铝合金、亚克力</td>
+                            <td class="py-4 px-6">商场、专卖店</td>
+                            <td class="py-4 px-6">尺寸、颜色、结构</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">常用道具</td>
+                            <td class="py-4 px-6">陈列模型</td>
+                            <td class="py-4 px-6">ABS塑料、金属</td>
+                            <td class="py-4 px-6">展会、展厅</td>
+                            <td class="py-4 px-6">比例、材质、细节</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">不锈钢制品</td>
+                            <td class="py-4 px-6">不锈钢屏风</td>
+                            <td class="py-4 px-6">304不锈钢</td>
+                            <td class="py-4 px-6">酒店、会所、别墅</td>
+                            <td class="py-4 px-6">尺寸、图案、表面处理</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">不锈钢制品</td>
+                            <td class="py-4 px-6">不锈钢栏杆</td>
+                            <td class="py-4 px-6">316不锈钢</td>
+                            <td class="py-4 px-6">建筑、景观</td>
+                            <td class="py-4 px-6">尺寸、造型</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">铝制产品</td>
+                            <td class="py-4 px-6">铝制装饰件</td>
+                            <td class="py-4 px-6">铝合金</td>
+                            <td class="py-4 px-6">家居、商业空间</td>
+                            <td class="py-4 px-6">形状、表面处理</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">铝制产品</td>
+                            <td class="py-4 px-6">铝制展示架</td>
+                            <td class="py-4 px-6">轻质铝合金</td>
+                            <td class="py-4 px-6">展会、促销活动</td>
+                            <td class="py-4 px-6">尺寸、结构</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">时尚衣架</td>
+                            <td class="py-4 px-6">豪华西装架</td>
+                            <td class="py-4 px-6">不锈钢、实木</td>
+                            <td class="py-4 px-6">高端服装店、衣柜</td>
+                            <td class="py-4 px-6">材质、颜色、LOGO</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-custom">
+                            <td class="py-4 px-6">高端酒店家具</td>
+                            <td class="py-4 px-6">酒店床头柜</td>
+                            <td class="py-4 px-6">实木、不锈钢</td>
+                            <td class="py-4 px-6">五星级酒店</td>
+                            <td class="py-4 px-6">尺寸、材质、款式</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="#contact" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-custom shadow-md">
+                    获取完整产品目录 <i class="fa fa-download ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section id="history" class="py-20 bg-gradient-to-b from-white to-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">发展历程</h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">多年来，琅琳五金不断发展壮大，积累了丰富的行业经验和客户资源</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- 时间线中轴线 -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
+                
+                <!-- 时间线内容 -->
+                <div class="space-y-16">
+                    <!-- 2005年 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-8 md:mt-0">
+                            <h3 class="text-2xl font-bold mb-2">公司正式成立</h3>
+                            <p class="text-dark/70 mb-2">注册资金5,000,000 ¥</p>
+                            <p>苏州琅琳五金制品股份有限公司（前身为雨恭雕塑）正式成立，开始了在道具设计与制造领域的征程。</p>
+                        </div>
+                        
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 order-1 md:order-2">
+                            <span class="text-white font-bold">2005</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 hidden md:block order-3"></div>
+                    </div>
+                    
+                    <!-- 2010年 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block order-1"></div>
+                        
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 order-2">
+                            <span class="text-white font-bold">2010</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 order-3 mt-8 md:mt-0">
+                            <h3 class="text-2xl font-bold mb-2">建立专业外贸团队</h3>
+                            <p class="text-dark/70 mb-2">开拓海外市场</p>
+                            <p>公司组建专业的外贸团队，开始将产品推向国际市场，迈出了全球化发展的重要一步。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2015年 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-8 md:mt-0">
+                            <h3 class="text-2xl font-bold mb-2">规模扩大</h3>
+                            <p class="text-dark/70 mb-2">厂房发展为5000m²</p>
+                            <p>随着业务的快速发展，公司扩大生产规模，厂房面积达到5000平方米，生产能力大幅提升。</p>
+                        </div>
+                        
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 order-1 md:order-2">
+                            <span class="text-white font-bold">2015</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 hidden md:block order-3"></div>
+                    </div>
+                    
+                    <!-- 2018年 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block order-1"></div>
+                        
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 order-2">
+                            <span class="text-white font-bold">2018</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 order-3 mt-8 md:mt-0">
+                            <h3 class="text-2xl font-bold mb-2">行业认可</h3>
+                            <p class="text-dark/70 mb-2">荣获波司登、红豆等行业头部品牌优秀供应商</p>
+                            <p>公司凭借优质的产品和服务，获得了多家行业知名品牌的认可，成为其优秀供应商。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2019年 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-8 md:mt-0">
+                            <h3 class="text-2xl font-bold mb-2">业绩突破</h3>
+                            <p class="text-dark/70 mb-2">年度GMV达50,000,000 ¥</p>
+                            <p>公司业务持续增长，年度GMV突破5000万元，实现了历史性的业绩突破。</p>
+                        </div>
+                        
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 order-1 md:order-2">
+                            <span class="text-white font-bold">2019</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 hidden md:block order-3"></div>
+                    </div>
+                    
+                    <!-- 2020年 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block order-1"></div>
+                        
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 order-2">
+                            <span class="text-white font-bold">2020</span>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-12 order-3 mt-8 md:mt-0">
+                            <h3 class="text-2xl font-bold mb-2">分厂建立</h3>
+                            <p class="text-dark/70 mb-2">新建12000m²郎溪分厂</p>
+                            <p>公司在郎溪新建分厂，厂房面积达12000平方米，专业服务高端品牌客户，进一步扩大了生产规模和服务能力。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司文化 -->
+    <section id="culture" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">公司文化</h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">我们的核心价值观塑造了公司的行为方式和发展方向</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-light rounded-xl p-8 text-center hover:shadow-lg transition-custom group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-custom">
+                        <i class="fa fa-users text-2xl text-primary group-hover:text-white transition-custom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">客户至上</h3>
+                    <p class="text-dark/70">站在客户的角度上去思考问题、提供解决方案，最终满足客户的需求</p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 text-center hover:shadow-lg transition-custom group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-custom">
+                        <i class="fa fa-rocket text-2xl text-primary group-hover:text-white transition-custom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">高效生产</h3>
+                    <p class="text-dark/70">专业的态度+平常的心态=高效率生产，确保产品按时高质量交付</p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 text-center hover:shadow-lg transition-custom group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-custom">
+                        <i class="fa fa-handshake-o text-2xl text-primary group-hover:text-white transition-custom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">诚信经营</h3>
+                    <p class="text-dark/70">诚信、正直、信守承诺，保证交易的可靠、质量、时效</p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 text-center hover:shadow-lg transition-custom group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-custom">
+                        <i class="fa fa-refresh text-2xl text-primary group-hover:text-white transition-custom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">拥抱变化</h3>
+                    <p class="text-dark/70">面对复杂多变的市场环境积极改变，从而获得独特的市场竞争力</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-primary/5 rounded-2xl p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-2">经营理念</h3>
+                    <p class="text-dark/70">指导我们不断前进的核心思想</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md max-w-xs text-center">
+                        <div class="text-4xl font-bold text-primary mb-2">"质量第一"</div>
+                        <p class="text-dark/70">我们始终将产品质量放在首位，精益求精，追求卓越</p>
+                    </div>
+                    
+                    <div class="text-3xl text-primary hidden md:block">
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md max-w-xs text-center">
+                        <div class="text-4xl font-bold text-primary mb-2">"信誉至上"</div>
+                        <p class="text-dark/70">我们珍视每一份信任，信守承诺，与客户建立长期稳定的合作关系</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">联系我们</h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">欢迎随时与我们联系，我们将竭诚为您提供服务</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-map-marker text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">公司地址</h4>
+                                    <p class="text-dark/70">中国江苏省常熟市上湖镇野塘工业区新乡村</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">联系电话</h4>
+                                    <p class="text-dark/70">+86 13170103603</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">电子邮箱</h4>
+                                    <p class="text-dark/70">13170103603@163.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                    <i class="fa fa-clock-o text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">工作时间</h4>
+                                    <p class="text-dark/70">周一至周五: 9:00 - 18:00</p>
+                                    <p class="text-dark/70">周六至周日: 休息</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-lg mb-4">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a href="#" class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a href="#" class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6">发送消息</h3>
+                        
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-dark/80 mb-2">您的姓名</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-custom" placeholder="请输入您的姓名">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-dark/80 mb-2">电子邮箱</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-custom" placeholder="请输入您的邮箱">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-dark/80 mb-2">主题</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-custom" placeholder="请输入消息主题">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-dark/80 mb-2">您的消息</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-custom" placeholder="请输入您的消息内容"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary/90 transition-custom shadow-md hover:shadow-lg">
+                                发送消息 <i class="fa fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">苏州琅琳五金</h3>
+                    <p class="text-white/70 mb-4">专业设计、开发、生产制作各类道具的综合性企业，致力于为客户提供高品质的产品与服务。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-white transition-custom">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-custom">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-custom">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/70 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="#about" class="text-white/70 hover:text-white transition-custom">公司简介</a></li>
+                        <li><a href="#products" class="text-white/70 hover:text-white transition-custom">产品展示</a></li>
+                        <li><a href="#product-catalog" class="text-white/70 hover:text-white transition-custom">产品目录</a></li>
+                        <li><a href="#history" class="text-white/70 hover:text-white transition-custom">发展历程</a></li>
+                        <li><a href="#culture" class="text-white/70 hover:text-white transition-custom">公司文化</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-white transition-custom">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">产品领域</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-white transition-custom">雕塑艺术</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-custom">精致模型</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-custom">不锈钢制品</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-custom">铝制产品</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-custom">高端酒店家具</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系信息</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-white/70">中国江苏省常熟市上湖镇野塘工业区新乡村</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-white/70">+86 18626136013</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-white/70">13170103603@163.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-white/50">
+                <p>© 2025 苏州琅琳五金制品股份有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-md');
+                navbar.classList.remove('py-4');
+                
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow-md');
+                
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fa fa-times"></i>';
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+                }
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 产品滑动展示功能
+        const productsContainer = document.getElementById('products-container');
+        const scrollLeftBtn = document.getElementById('scroll-left');
+        const scrollRightBtn = document.getElementById('scroll-right');
+        
+        // 滑动距离（根据产品卡片宽度调整）
+        const scrollAmount = 380;
+        
+        // 左滑
+        scrollLeftBtn.addEventListener('click', () => {
+            productsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+        
+        // 右滑
+        scrollRightBtn.addEventListener('click', () => {
+            productsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+        
+        // 触摸滑动支持
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        productsContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        
+        productsContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX - touchStartX > swipeThreshold) {
+                // 右滑，内容向左滚动
+                productsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else if (touchStartX - touchEndX > swipeThreshold) {
+                // 左滑，内容向右滚动
+                productsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+        
+        // 为元素添加进入动画
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.grid > div, section > div > div > h3, #products-container > div, table');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('opacity-100', 'translate-y-0');
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        };
+        
+        // 初始化动画状态
+        document.querySelectorAll('.grid > div, section > div > div > h3, #products-container > div, table').forEach(element => {
+            element.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        });
+        
+        // 页面加载和滚动时触发动画
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+
+
+    </body></html>
+    
